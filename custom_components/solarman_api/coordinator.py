@@ -102,5 +102,5 @@ def _get_device_info(device_serial_number: int, name: str) -> DeviceInfo:
         identifiers={(DOMAIN, str(device_serial_number))},
         manufacturer=MANUFACTURER,
         name=name,
-        configuration_url="https://globalapi.solarmanpv.com/device/v1.0/currentData",
+        configuration_url="https://www.solarmanpv.com/",
     )
