@@ -57,7 +57,7 @@ class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
                     errors["base"] = error.status
                 else:
                     await self.async_set_unique_id(
-                        user_input[CONF_DEVICE_SERIAL_NUMBER]
+                        str(user_input[CONF_DEVICE_SERIAL_NUMBER])
                     )
                     self._abort_if_unique_id_configured()
 
