@@ -1,0 +1,87 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "Device is already configured",
+      "reauth_successful": "Re-authentication was successful"
+    },
+    "error": {
+      "cannot_connect": "Failed to connect",
+      "invalid_auth": "Invalid authentication",
+      "unknown": "Unexpected error"
+    },
+    "step": {
+      "user": {
+        "data": {
+          "app_id": "Application ID",
+          "app_secret": "Application Secret",
+          "email": "Email",
+          "name": "Name",
+          "password": "Password"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ac_current": {
+        "name": "AC current"
+      },
+      "ac_output_frequency": {
+        "name": "AC output frequency"
+      },
+      "ac_output_power": {
+        "name": "AC output power"
+      },
+      "ac_voltage": {
+        "name": "AC voltage"
+      },
+      "daily_production": {
+        "name": "Daily Production"
+      },
+      "daily_production_1": {
+        "name": "Daily Production 1"
+      },
+      "daily_production_2": {
+        "name": "Daily Production 2"
+      },
+      "dc_current_pv1": {
+        "name": "DC current PV2"
+      },
+      "dc_current_pv2": {
+        "name": "DC current PV2"
+      },
+      "dc_power_pv1": {
+        "name": "DC power PV2"
+      },
+      "dc_power_pv2": {
+        "name": "DC power PV2"
+      },
+      "dc_voltage_pv1": {
+        "name": "DC voltage PV2"
+      },
+      "dc_voltage_pv2": {
+        "name": "DC voltage PV2"
+      },
+      "radiator_temp": {
+        "name": "radiator temperature"
+      },
+      "total_production": {
+        "name": "Total Production"
+      },
+      "total_production_1": {
+        "name": "Total Production 1"
+      },
+      "total_production_2": {
+        "name": "Total Production 2"
+      }
+    }
+  },
+  "exceptions": {
+    "auth_failed": {
+      "message": "Authentication failed for {device}: {error}"
+    },
+    "update_error": {
+      "message": "An error occurred while retrieving data from the Solarman API: {error}"
+    }
+  }
+}

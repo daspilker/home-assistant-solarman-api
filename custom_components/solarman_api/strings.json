@@ -1,0 +1,87 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "data": {
+          "name": "[%key:common::config_flow::data::name%]",
+          "app_id": "Application ID",
+          "app_secret": "Application Secret",
+          "email": "[%key:common::config_flow::data::email%]",
+          "password": "[%key:common::config_flow::data::password%]"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "[%key:common::config_flow::error::cannot_connect%]",
+      "invalid_auth": "[%key:common::config_flow::error::invalid_auth%]",
+      "unknown": "[%key:common::config_flow::error::unknown%]"
+    },
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ac_current": {
+        "name": "AC current"
+      },
+      "ac_output_frequency": {
+        "name": "AC output frequency"
+      },
+      "ac_output_power": {
+        "name": "AC output power"
+      },
+      "ac_voltage": {
+        "name": "AC voltage"
+      },
+      "daily_production": {
+        "name": "Daily Production"
+      },
+      "daily_production_1": {
+        "name": "Daily Production 1"
+      },
+      "daily_production_2": {
+        "name": "Daily Production 2"
+      },
+      "dc_current_pv1": {
+        "name": "DC current PV2"
+      },
+      "dc_power_pv1": {
+        "name": "DC power PV2"
+      },
+      "dc_voltage_pv1": {
+        "name": "DC voltage PV2"
+      },
+      "dc_current_pv2": {
+        "name": "DC current PV2"
+      },
+      "dc_power_pv2": {
+        "name": "DC power PV2"
+      },
+      "dc_voltage_pv2": {
+        "name": "DC voltage PV2"
+      },
+      "radiator_temp": {
+        "name": "radiator temperature"
+      },
+      "total_production": {
+        "name": "Total Production"
+      },
+      "total_production_1": {
+        "name": "Total Production 1"
+      },
+      "total_production_2": {
+        "name": "Total Production 2"
+      }
+    }
+  },
+  "exceptions": {
+    "update_error": {
+      "message": "An error occurred while retrieving data from the Solarman API: {error}"
+    },
+    "auth_failed": {
+      "message": "Authentication failed for {device}: {error}"
+    }
+  }
+}
