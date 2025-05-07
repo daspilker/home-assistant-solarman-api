@@ -15,7 +15,7 @@ from .api import (
     ApiError,
     InvalidApplicationIdError,
     InvalidApplicationSecretError,
-    InvalidDeviceSerialNumber,
+    InvalidDeviceSerialNumberError,
     InvalidEmailOrPasswordSecretError,
     SolarmanApiClient,
 )
@@ -68,7 +68,7 @@ class SolarmanCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             InvalidApplicationIdError,
             InvalidApplicationSecretError,
             InvalidEmailOrPasswordSecretError,
-            InvalidDeviceSerialNumber,
+            InvalidDeviceSerialNumberError,
         ) as error:
             raise ConfigEntryAuthFailed(
                 translation_domain=DOMAIN,

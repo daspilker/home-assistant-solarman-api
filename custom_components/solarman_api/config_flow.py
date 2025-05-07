@@ -7,7 +7,6 @@ from collections.abc import Mapping
 from typing import Any
 
 import voluptuous as vol
-
 from homeassistant.config_entries import ConfigFlow, ConfigFlowResult
 from homeassistant.const import CONF_EMAIL, CONF_NAME, CONF_PASSWORD
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
@@ -15,7 +14,7 @@ from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from .api import (
     InvalidApplicationIdError,
     InvalidApplicationSecretError,
-    InvalidDeviceSerialNumber,
+    InvalidDeviceSerialNumberError,
     SolarmanApiClient,
     SolarmanError,
 )
@@ -51,7 +50,7 @@ class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
                     errors[CONF_APP_ID] = error.status
                 except InvalidApplicationSecretError as error:
                     errors[CONF_APP_SECRET] = error.status
-                except InvalidDeviceSerialNumber as error:
+                except InvalidDeviceSerialNumberError as error:
                     errors[CONF_DEVICE_SERIAL_NUMBER] = error.status
                 except SolarmanError as error:
                     errors["base"] = error.status

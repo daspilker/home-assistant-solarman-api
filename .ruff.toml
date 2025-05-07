@@ -15,7 +15,11 @@ ignore = [
     "D212", # multi-line-summary-first-line (incompatible with formatter)
     "COM812", # incompatible with formatter
     "ISC001", # incompatible with formatter
+    "TC001", # Move application import {} into a type-checking block
     "TC002", # Move third-party import {} into a type-checking block
+    "TC003", # Move standard library import {} into a type-checking block
+    "TC006", # Add quotes to type expression in typing.cast()
+    "TRY003", # Avoid specifying long messages outside the exception class
 ]
 
 [lint.flake8-pytest-style]

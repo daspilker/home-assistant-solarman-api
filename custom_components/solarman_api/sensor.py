@@ -195,7 +195,7 @@ SENSOR_TYPES: tuple[SensorEntityDescription, ...] = (
 
 
 async def async_setup_entry(
-    hass: HomeAssistant,
+    hass: HomeAssistant,  # noqa: ARG001
     entry: SolarmanConfigEntry,
     async_add_entities: AddConfigEntryEntitiesCallback,
 ) -> None:

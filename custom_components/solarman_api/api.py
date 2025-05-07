@@ -18,15 +18,15 @@ class SolarmanApiClient:
         session: aiohttp.ClientSession,
         email: str,
         password: str,
-        applicationId: str,
-        applicationSecret: str,
+        application_id: str,
+        application_secret: str,
     ) -> None:
         """Initialize."""
         self.session = session
         self.email = email
         self.password = password
-        self.applicationId = applicationId
-        self.applicationSecret = applicationSecret
+        self.application_id = application_id
+        self.application_secret = application_secret
         self.exiration_time = 0
         self.access_token = None
 
@@ -35,12 +35,12 @@ class SolarmanApiClient:
 
         passhash = hashlib.sha256(self.password.encode()).hexdigest()
         data = {
-            "appSecret": self.applicationSecret,
+            "appSecret": self.application_secret,
             "email": self.email,
             "password": passhash,
         }
         async with self.session.post(
-            f"https://globalapi.solarmanpv.com/account/v1.0/token?appId={self.applicationId}",
+            f"https://globalapi.solarmanpv.com/account/v1.0/token?appId={self.application_id}",
             json=data,
         ) as response:
             json = await response.json()
@@ -62,7 +62,8 @@ class SolarmanApiClient:
             await self.fetch_token()
 
         if self.access_token is None:
-            raise AuthenticationError("could not get access token")
+            status = "could not get access token"
+            raise AuthenticationError(status)
         return self.access_token
 
     async def get_data(self, device_serial_number: int) -> dict[str, Any]:
@@ -79,9 +80,9 @@ class SolarmanApiClient:
             json = await response.json()
             if not json["success"]:
                 if json["code"] == "2101008":
-                    raise InvalidDeviceSerialNumber(json["msg"])
+                    raise InvalidDeviceSerialNumberError(json["msg"])
                 if json["code"] == "2101016":
-                    raise InvalidDeviceSerialNumber(json["msg"])
+                    raise InvalidDeviceSerialNumberError(json["msg"])
                 raise ApiError(json["msg"])
             return cast(dict[str, Any], json)
 
@@ -119,5 +120,5 @@ class InvalidEmailOrPasswordSecretError(AuthenticationError):
         super().__init__("invalid email or password")
 
 
-class InvalidDeviceSerialNumber(ApiError):
+class InvalidDeviceSerialNumberError(ApiError):
     """Raised when an invalid device serial number is provided."""

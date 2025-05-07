@@ -15,7 +15,8 @@ TO_REDACT = {CONF_EMAIL, CONF_PASSWORD, CONF_APP_SECRET}
 
 
 async def async_get_config_entry_diagnostics(
-    hass: HomeAssistant, config_entry: SolarmanConfigEntry
+    hass: HomeAssistant,  # noqa: ARG001
+    config_entry: SolarmanConfigEntry,
 ) -> dict[str, Any]:
     """Return diagnostics for a config entry."""
     solarman_data: SolarmanData = config_entry.runtime_data
