@@ -22,3 +22,10 @@ Installation
 3. Restart Home-Assistant
 4. Add the "Solarman API" integration.
 5. Enter your credentials for the Solarman Cloud. Also enter the serial number of your inverter.
+
+Development Setup
+-----------------
+
+1. Clone this repository. If using Windows, clone the repository in WSL.
+2. Open Visual Studio Code. When asked, reopen Visual Studio code in the dev container.
+3. Run the `scripts/develop` to start HA and test out your new integration.
