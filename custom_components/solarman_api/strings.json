@@ -36,43 +36,43 @@
         "name": "AC voltage"
       },
       "daily_production": {
-        "name": "Daily Production"
+        "name": "Daily production"
       },
       "daily_production_1": {
-        "name": "Daily Production 1"
+        "name": "Daily production 1"
       },
       "daily_production_2": {
-        "name": "Daily Production 2"
+        "name": "Daily production 2"
       },
       "dc_current_pv1": {
+        "name": "DC current PV2"
+      },
+      "dc_current_pv2": {
         "name": "DC current PV2"
       },
       "dc_power_pv1": {
         "name": "DC power PV2"
       },
-      "dc_voltage_pv1": {
-        "name": "DC voltage PV2"
-      },
-      "dc_current_pv2": {
-        "name": "DC current PV2"
-      },
       "dc_power_pv2": {
         "name": "DC power PV2"
+      },
+      "dc_voltage_pv1": {
+        "name": "DC voltage PV2"
       },
       "dc_voltage_pv2": {
         "name": "DC voltage PV2"
       },
       "radiator_temp": {
-        "name": "radiator temperature"
+        "name": "Radiator temperature"
       },
       "total_production": {
-        "name": "Total Production"
+        "name": "Total production"
       },
       "total_production_1": {
-        "name": "Total Production 1"
+        "name": "Total production 1"
       },
       "total_production_2": {
-        "name": "Total Production 2"
+        "name": "Total production 2"
       }
     }
   },
