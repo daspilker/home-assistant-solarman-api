@@ -66,7 +66,7 @@ class SolarmanApiClient:
             raise AuthenticationError(status)
         return self.access_token
 
-    async def get_data(self, device_serial_number: int) -> dict[str, Any]:
+    async def get_data(self, device_serial_number: str) -> dict[str, Any]:
         """Fetch data for device."""
 
         token = await self.get_token()
