@@ -24,7 +24,7 @@ from .const import CONF_APP_ID, CONF_APP_SECRET, CONF_DEVICE_SERIAL_NUMBER, DOMA
 class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
     """Config flow for Solarman."""
 
-    VERSION = 1
+    VERSION = 2
 
     device_serial_number: str
 
@@ -56,7 +56,7 @@ class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
                     errors["base"] = error.status
                 else:
                     await self.async_set_unique_id(
-                        str(user_input[CONF_DEVICE_SERIAL_NUMBER])
+                        user_input[CONF_DEVICE_SERIAL_NUMBER]
                     )
                     self._abort_if_unique_id_configured()
 

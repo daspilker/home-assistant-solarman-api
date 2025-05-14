@@ -99,7 +99,7 @@ def _get_device_info(device_serial_number: str, name: str) -> DeviceInfo:
     """Get device info."""
     return DeviceInfo(
         entry_type=DeviceEntryType.SERVICE,
-        identifiers={(DOMAIN, str(device_serial_number))},
+        identifiers={(DOMAIN, device_serial_number)},
         manufacturer=MANUFACTURER,
         name=name,
         configuration_url="https://www.solarmanpv.com/",
