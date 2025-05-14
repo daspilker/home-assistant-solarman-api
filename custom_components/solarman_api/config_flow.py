@@ -26,7 +26,7 @@ class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
 
     VERSION = 1
 
-    device_serial_number: int
+    device_serial_number: str
 
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
@@ -73,7 +73,7 @@ class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_PASSWORD): str,
                     vol.Required(CONF_APP_ID): str,
                     vol.Required(CONF_APP_SECRET): str,
-                    vol.Required(CONF_DEVICE_SERIAL_NUMBER): int,
+                    vol.Required(CONF_DEVICE_SERIAL_NUMBER): str,
                 }
             ),
             errors=errors,

@@ -34,7 +34,7 @@ class SolarmanCoordinator(DataUpdateCoordinator[dict[str, Any]]):
     """Class to manage fetching Solarman data."""
 
     config_entry: ConfigEntry
-    device_serial_number: int
+    device_serial_number: str
     device_name: str
 
     def __init__(
@@ -95,7 +95,7 @@ class SolarmanData:
     coordinator: SolarmanCoordinator
 
 
-def _get_device_info(device_serial_number: int, name: str) -> DeviceInfo:
+def _get_device_info(device_serial_number: str, name: str) -> DeviceInfo:
     """Get device info."""
     return DeviceInfo(
         entry_type=DeviceEntryType.SERVICE,
