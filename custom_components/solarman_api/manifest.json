@@ -1,7 +1,9 @@
 {
   "domain": "solarman_api",
   "name": "Solarman API",
-  "codeowners": ["@daspilker"],
+  "codeowners": [
+    "@daspilker"
+  ],
   "config_flow": true,
   "documentation": "https://github.com/daspilker/home-assistant-solarman-api",
   "integration_type": "service",
@@ -9,5 +11,5 @@
   "issue_tracker": "https://github.com/daspilker/home-assistant-solarman-api/issues",
   "quality_scale": "bronze",
   "requirements": [],
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
