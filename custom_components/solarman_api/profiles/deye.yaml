@@ -1,0 +1,117 @@
+sensors:
+  - device_class: energy
+    key: Et_ge0
+    name: Total production
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: energy
+    entity_category: diagnostic
+    key: Et_ge1
+    name: Total production 1
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: energy
+    entity_category: diagnostic
+    key: Et_ge2
+    name: Total production 2
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: energy
+    key: Etdy_ge0
+    name: Daily production
+    native_unit_of_measurement: kWh
+    state_class: total
+    suggested_display_precision: 1
+  - device_class: energy
+    entity_category: diagnostic
+    key: Etdy_ge1
+    name: Daily production 1
+    native_unit_of_measurement: kWh
+    state_class: total
+    suggested_display_precision: 1
+  - device_class: energy
+    entity_category: diagnostic
+    key: Etdy_ge2
+    name: Daily production 2
+    native_unit_of_measurement: kWh
+    state_class: total
+    suggested_display_precision: 1
+  - device_class: current
+    entity_category: diagnostic
+    key: AC1
+    name: AC current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 1
+  - device_class: frequency
+    entity_category: diagnostic
+    key: AF1
+    name: AC output frequency
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    key: APo_t1
+    name: AC output power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    key: AV1
+    name: AC voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 1
+  - device_class: current
+    entity_category: diagnostic
+    key: DC1
+    name: DC current PV1
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 1
+  - device_class: power
+    entity_category: diagnostic
+    key: DP1
+    name: DC power PV1
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    key: DV1
+    name: DC voltage PV1
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 1
+  - device_class: current
+    entity_category: diagnostic
+    key: DC2
+    name: DC current PV2
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 1
+  - device_class: power
+    entity_category: diagnostic
+    key: DP2
+    name: DC power PV2
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    key: DV2
+    name: DC voltage PV2
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 1
+  - device_class: temperature
+    entity_category: diagnostic
+    key: AC_RDT_T1
+    name: Radiator temperature
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 1

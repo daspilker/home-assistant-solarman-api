@@ -18,7 +18,14 @@ from .api import (
     SolarmanApiClient,
     SolarmanError,
 )
-from .const import CONF_APP_ID, CONF_APP_SECRET, CONF_DEVICE_SERIAL_NUMBER, DOMAIN
+from .const import (
+    CONF_APP_ID,
+    CONF_APP_SECRET,
+    CONF_DEVICE_SERIAL_NUMBER,
+    CONF_PROFILE,
+    DOMAIN,
+    get_profile_list,
+)
 
 
 class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
@@ -33,6 +40,12 @@ class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
     ) -> ConfigFlowResult:
         """Handle a flow initialized by the user."""
         errors = {}
+
+        # Get the list of profiles for the UI
+        profiles = await self.hass.async_add_executor_job(get_profile_list, self.hass)
+
+        if not profiles:
+            errors["base"] = "no_profiles_found"
 
         if user_input is not None:
             session = async_get_clientsession(self.hass)
@@ -74,6 +87,7 @@ class SolarmanFlowHandler(ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_APP_ID): str,
                     vol.Required(CONF_APP_SECRET): str,
                     vol.Required(CONF_DEVICE_SERIAL_NUMBER): str,
+                    vol.Required(CONF_PROFILE): vol.In(profiles),
                 }
             ),
             errors=errors,

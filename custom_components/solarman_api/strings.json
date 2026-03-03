@@ -7,7 +7,9 @@
           "app_id": "Application ID",
           "app_secret": "Application Secret",
           "email": "[%key:common::config_flow::data::email%]",
-          "password": "[%key:common::config_flow::data::password%]"
+          "password": "[%key:common::config_flow::data::password%]",
+          "device_serial_number": "Inverter Serial Number",
+          "profile": "Inverter Profile"
         }
       }
     },
@@ -19,61 +21,6 @@
     "abort": {
       "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
       "reauth_successful": "[%key:common::config_flow::abort::reauth_successful%]"
-    }
-  },
-  "entity": {
-    "sensor": {
-      "ac_current": {
-        "name": "AC current"
-      },
-      "ac_output_frequency": {
-        "name": "AC output frequency"
-      },
-      "ac_output_power": {
-        "name": "AC output power"
-      },
-      "ac_voltage": {
-        "name": "AC voltage"
-      },
-      "daily_production": {
-        "name": "Daily production"
-      },
-      "daily_production_1": {
-        "name": "Daily production 1"
-      },
-      "daily_production_2": {
-        "name": "Daily production 2"
-      },
-      "dc_current_pv1": {
-        "name": "DC current PV2"
-      },
-      "dc_current_pv2": {
-        "name": "DC current PV2"
-      },
-      "dc_power_pv1": {
-        "name": "DC power PV2"
-      },
-      "dc_power_pv2": {
-        "name": "DC power PV2"
-      },
-      "dc_voltage_pv1": {
-        "name": "DC voltage PV2"
-      },
-      "dc_voltage_pv2": {
-        "name": "DC voltage PV2"
-      },
-      "radiator_temp": {
-        "name": "Radiator temperature"
-      },
-      "total_production": {
-        "name": "Total production"
-      },
-      "total_production_1": {
-        "name": "Total production 1"
-      },
-      "total_production_2": {
-        "name": "Total production 2"
-      }
     }
   },
   "exceptions": {

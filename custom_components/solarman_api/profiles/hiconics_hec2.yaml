@@ -1,0 +1,1225 @@
+sensors:
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: SN1
+    name: Inverter SN
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: INV_MOD1
+    name: Inverter Model
+  - datetime_format: '%Y-%m-%d %H:%M:%S %z'
+    device_class: timestamp
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: SYSTIM1
+    name: RTC Time
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: R_AC_V_O_C
+    name: Rated AC Voltage of Inverter
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: R_AC_F_O_C
+    name: Rated AC Frequency of Inverter
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: R_AC_P_O_C
+    name: Rated AC Power of Inverter
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: R_AC_C_O_C
+    name: Rated AC Current of Inverter
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    key: DV1
+    name: DC Voltage PV1
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    key: DV2
+    name: DC Voltage PV2
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    key: AC_S_V_A
+    name: AC Couple-Solar Voltage A
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    key: AC_C_S_P
+    name: AC Couple-Solar Power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: current
+    key: AC_S_C_A
+    name: AC Couple-Solar Current A
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    key: AC_S_P_A
+    name: AC Couple-Solar Power A
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: frequency
+    key: AC_S_F_A
+    name: AC Couple-Solar Frequency A
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: energy
+    key: AC_S_E_D
+    name: AC Couple-Solar Energy Today
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 2
+  - device_class: energy
+    key: AC_S_E_M
+    name: AC Couple-Solar Energy This Month
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 2
+  - device_class: power
+    key: AC_S_P_S
+    name: AC Couple-Solar Power Sum
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: energy
+    key: AC_S_E_T
+    name: AC Couple-Solar Energy Total
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: DC1
+    name: DC Current PV1
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: DC2
+    name: DC Current PV2
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    key: DP1
+    name: DC Power PV1
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: power
+    entity_category: diagnostic
+    key: DP2
+    name: DC Power PV2
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: AV1
+    name: AC Voltage R/U/A
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: AC1
+    name: AC Current R/U/A
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: A_Fo1
+    name: AC Output Frequency R
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: energy
+    key: Etdy_ge1
+    name: Daily Production (Active)
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: power
+    key: AC_R_P
+    name: AC Real Power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: power
+    key: PG_Pt1
+    name: Total Grid Power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: frequency
+    key: G_FR_A
+    name: Phase A Grid Frequency
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    key: G1
+    name: Grid Phase-A Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    key: G4
+    name: Grid Phase-A Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: energy
+    key: t_gc_tdy1
+    name: Daily Grid Feed-in
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: energy
+    key: Etdy_pu1
+    name: Daily Energy Purchased
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: power
+    key: GRID_A_P
+    name: Grid Active Power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: reactive_power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: GRID_RE_P
+    name: Grid Reactive Power
+    native_unit_of_measurement: var
+    state_class: measurement
+    suggested_display_precision: 0
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: P_FACTOR
+    name: Power Factor
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    key: G7
+    name: Grid Phase-A Power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: voltage
+    entity_category: diagnostic
+    key: '2614'
+    name: DC Bus Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    key: L_AP_P
+    name: Load A-Phase Power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: power
+    entity_category: diagnostic
+    key: E_Puse_t1
+    name: Total Consumption Power
+    native_unit_of_measurement: W
+    state_class: total_increasing
+    suggested_display_precision: 0
+  - device_class: voltage
+    entity_category: diagnostic
+    key: L_P_V_A
+    name: Load Phase A Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    key: LCA
+    name: Load Phase A Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: energy
+    key: Etdy_use1
+    name: Load Daily Power Consumption
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: frequency
+    entity_category: diagnostic
+    key: L_F
+    name: Load Fequency
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: energy
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: B_L_E_D
+    name: Backup Load Energy Today
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: energy
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: B_L_E_M
+    name: Backup Load Energy This Month
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: energy
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: B_L_E_T
+    name: Backup Load Energy Total
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: B_L_P
+    name: Backup Load Power
+    native_unit_of_measurement: W
+    state_class: total_increasing
+    suggested_display_precision: 0
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: B_V1
+    name: PCS Battery Port Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: B_C1
+    name: PCS Battery Port Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    key: B_P1
+    name: Battery Power
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: battery
+    key: B_left_cap1
+    name: SoC
+    native_unit_of_measurement: '%'
+    state_class: measurement
+  - device_class: energy
+    key: Etdy_cg1
+    name: Daily Charging Energy
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - device_class: energy
+    key: Etdy_dcg1
+    name: Daily Discharging Energy
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 1
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: MIN_V_B_CNO
+    name: Min. Voltage of Battery Cell No.
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: MAX_V_B_CNO
+    name: Max. Voltage of Battery Cell No.
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: MIN_Temp_B_CNO
+    name: Min. Temp. of Battery Cell No.
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: MAX_Temp_B_CNO
+    name: Max. Temp. of Battery Cell No.
+    state_class: measurement
+  - device_class: temperature
+    entity_category: diagnostic
+    key: MIN_Temp_B_C
+    name: Min. Temp. of Battery Cell
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: temperature
+    entity_category: diagnostic
+    key: MAX_Temp_B_C
+    name: Max. Temp. of Battery Cell
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Cur_Mul_Mo
+    name: Current Multi-connection Mode
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Cur_Mul_St
+    name: Current Multi-connection Status
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Onl_Fail_Re
+    name: Online Failure Record
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Onl_M_Con
+    name: Online Master Control
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Onl_S_Con
+    name: Online Slave Control
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_Con_St
+    name: Inline Connection Status
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_Wo_St
+    name: Inline Work Status
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_Wo_Fl
+    name: Inline Work Flag
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_Cd_St
+    name: Inline Charge/Discharge Status
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_Co_St
+    name: Inline Contactor Status
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_B_Vol
+    name: Inline B+ Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    key: Inl_P_Vol
+    name: Inline Pack Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    key: Inl_To_Cur
+    name: Inline Total Current
+    native_unit_of_measurement: W
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: power
+    entity_category: diagnostic
+    key: Inl_Run_Pow
+    name: Inline Running Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    key: Inl_SOC
+    name: Inline SOC
+    state_class: measurement
+  - entity_category: diagnostic
+    key: Inl_SOH
+    name: Inline SOH
+    state_class: measurement
+  - device_class: voltage
+    entity_category: diagnostic
+    key: Inl_Max_Vol
+    name: Inline Maximum Voltage
+    native_unit_of_measurement: mV
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: voltage
+    entity_category: diagnostic
+    key: Inl_Min_Vol
+    name: Inline Minimum Voltage
+    native_unit_of_measurement: mV
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: temperature
+    entity_category: diagnostic
+    key: Inl_Max_Tem
+    name: Inline Maximum Temperature
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: temperature
+    entity_category: diagnostic
+    key: Inl_Min_Tem
+    name: Inline Minimum Temperature
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    key: Inl_Cha_Cur_L
+    name: Inline Charging Current Limit
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    key: Inl_Dis_Cur_L
+    name: Inline Discharge Current Limit
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_Vol_Sam_S
+    name: Number Of Inline Voltage Sampling Sections
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Inl_Tem_Sam_S
+    name: Number Of Inline Temperature Sampling Sections
+    state_class: measurement
+  - device_class: voltage
+    entity_category: diagnostic
+    key: Inl_Acc_Vol
+    name: Inline Total Accumulated Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    key: Inl_Max_Fau_L
+    name: Inline Maximum Fault Level
+    state_class: measurement
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Tot_Cur
+    name: Parallel Total Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Ope_Pow
+    name: Parallel Operating Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_SOC
+    name: Parallel SOC
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_SOH
+    name: Parallel SOH
+    state_class: measurement
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Max_Vol
+    name: Parallel Maximum Voltage
+    native_unit_of_measurement: mV
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Min_Vol
+    name: Parallel Minimum Voltage
+    native_unit_of_measurement: mV
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: temperature
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Max_Tem
+    name: Parallel Maximum Temperature
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: temperature
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Min_Tem
+    name: Parallel Minimum Temperature
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Cha_Cur
+    name: Parallel Charging Current Limit
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Dis_Cur
+    name: Parallel Discharge Current Limit
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Cha_Pow
+    name: Parallel Charging Power Limit
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Par_Dis_Pow
+    name: Parallel Discharge Power Limit
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: S_I
+    name: Supplier information
+  - entity_category: diagnostic
+    key: N_O_B_C_1
+    name: Number of Battery Clusters
+    state_class: measurement
+  - device_class: energy
+    key: T_B_C_Par
+    name: Total energy
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 2
+  - device_class: energy
+    key: U_B_C_Par
+    name: Available energy
+    native_unit_of_measurement: kWh
+    state_class: total_increasing
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    key: '6600'
+    name: BMS Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    key: '6601'
+    name: BMS Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - icon: "mdi:battery-heart-variant"
+    key: M6
+    name: Battery SOH
+    native_unit_of_measurement: '%'
+    state_class: measurement
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Ba_T
+    name: Battery Type
+  - entity_category: diagnostic
+    key: BMS_O_S
+    name: BMS Online Status
+  - device_class: voltage
+    entity_category: diagnostic
+    key: Max_V_B_C
+    name: Max. Voltage of Battery Cell
+    native_unit_of_measurement: mV
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: voltage
+    entity_category: diagnostic
+    key: Min_V_B_C
+    name: Min. Voltage of Battery Cell
+    native_unit_of_measurement: mV
+    state_class: measurement
+    suggested_display_precision: 0
+  - device_class: temperature
+    entity_category: diagnostic
+    key: Max_T_B_C
+    name: Max. Temp. of Battery Cell
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: temperature
+    entity_category: diagnostic
+    key: Min_T_B_C
+    name: Min. Temp. of Battery Cell
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: temperature
+    key: A_Temp
+    name: Ambient Temp.
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: temperature
+    key: R_Temp
+    name: PV Temperature
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: temperature
+    key: I_Temp
+    name: PCS Temperature
+    native_unit_of_measurement: °C
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: FEED_S_S
+    name: Feedback source selection
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: PV_B_ST1
+    name: PVB Status
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: PV_A_ST1
+    name: PVA Status
+  - entity_category: diagnostic
+    key: BAT_ST
+    name: BAT Status
+  - entity_category: diagnostic
+    key: GRID_ST
+    name: GRID Status
+  - entity_category: diagnostic
+    key: EPS_ST
+    name: EPS Status
+  - entity_category: diagnostic
+    key: DC_St
+    name: DCDC Status
+  - entity_category: diagnostic
+    key: INV_Sta
+    name: Inverter Status
+  - entity_category: diagnostic
+    key: Meter_S
+    name: Meter Status
+  - device_class: power
+    entity_category: diagnostic
+    key: Meter_T_A_P
+    name: Meter Total Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_V_A
+    name: CH2-Meter A-phase Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_C_A
+    name: CH2-Meter A-phase Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_AP_A
+    name: CH2-Meter A-phase Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_V_B
+    name: CH2-Meter B-phase Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_C_B
+    name: CH2-Meter B-phase Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_AP_B
+    name: CH2-Meter B-phase Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_V_C
+    name: CH2-Meter C-phase Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_C_C
+    name: CH2-Meter C-phase Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_AP_C
+    name: CH2-Meter C-phase Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: Meter2_AP_T
+    name: CH2-Meter Total Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    key: M_V_AP
+    name: Meter Phase A Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    key: M_C_AP
+    name: Meter Phase A Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    key: M_AC_P_A
+    name: Meter Phase A Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: reactive_power
+    entity_category: diagnostic
+    key: M_RE_P_A
+    name: Meter Phase A Reactive Power
+    native_unit_of_measurement: kvar
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: apparent_power
+    entity_category: diagnostic
+    key: M_AP_P_A
+    name: Meter Phase A Apparent Power
+    native_unit_of_measurement: kVA
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: M_V_BP
+    name: Meter Phase B Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: M_C_BP
+    name: Meter Phase B Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: M_AC_P_B
+    name: Meter Phase B Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: M_V_CP
+    name: Meter Phase C Voltage
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: current
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: M_C_CP
+    name: Meter Phase C Current
+    native_unit_of_measurement: A
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: power
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: M_AC_P_C
+    name: Meter Phase C Active Power
+    native_unit_of_measurement: kW
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_V_L1
+    name: Over-voltage Level 1(59.S1)
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_V_TOD1
+    name: Over-voltage Level 1 Voltage Threshold
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: OV_L_V_S_1
+    name: Over-voltage Level 1 Voltage Sampling Value
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_T_TOD1
+    name: Over-voltage Level 1 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_V_T1
+    name: Over-voltage Level 1 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_V_L2
+    name: Over-voltage Level 2(59.S2)
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_V_TOD2
+    name: Over-voltage Level 2 Voltage Threshold
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: OV_L_V_S_2
+    name: Over-voltage Level 2 Voltage Sampling Value
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_T_TOD2
+    name: Over-voltage Level 2 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_V_T2
+    name: Over-voltage Level 2 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_L1
+    name: Under-voltage Level 1(27.S1)
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_TOD1
+    name: Under-voltage Level 1 Voltage Threshold
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: UV_L_V_S_1
+    name: Under-voltage Level 1 Voltage Sampling Value
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_T_TOD1
+    name: Under-voltage Level 1 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_T1
+    name: Under-voltage Level 1 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_L2
+    name: Under-voltage Level 2(27.S2)
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_TOD2
+    name: Under-voltage Level 2 Voltage Threshold
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: voltage
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: UV_L_V_S_2
+    name: Under-voltage Level 2 Voltage Sampling Value
+    native_unit_of_measurement: V
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_T_TOD2
+    name: Under-voltage Level 2 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_T2
+    name: Under-voltage Level 2 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_F_L1
+    name: Over-Frequency Level 1(81>.S1)
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_F_TOD1
+    name: Over-Frequency Level 1 Frequency Threshold
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: OF_L_V_S_1
+    name: Over-Frequency Level 1 Frequency Sampling Value
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_T_FOD1
+    name: Over-Frequency Level 1 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_F_T1
+    name: Over-Frequency Level 1 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_F_L2
+    name: Over-Frequency Level 2(81>.S2)
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_F_TOD2
+    name: Over-Frequency Level 2 Frequency Threshold
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: OF_L_V_S_2
+    name: Over-Frequency Level 2 Frequency Sampling Value
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_T_FOD2
+    name: Over-Frequency Level 2 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: O_F_T2
+    name: Over-Frequency Level 2 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_F_L1
+    name: Under-Frequency Level 1(81<.S1)
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_F_FOD1
+    name: Under-Frequency Level 1 Frequency Threshold
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: UF_L_V_S_1
+    name: Under-Frequency Level 1 Frequency Sampling Value
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_T_FOD1
+    name: Under-Frequency Level 1 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_F1
+    name: Under-Frequency Level 1 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_F_L2
+    name: Under-Frequency Level 2(81<.S2)
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_F_FOD2
+    name: Under-Frequency Level 2 Frequency Threshold
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: frequency
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: UF_L_V_S_2
+    name: Under-Frequency Level 2 Frequency Sampling Value
+    native_unit_of_measurement: Hz
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_T_FOD2
+    name: Under-Frequency Level 2 Time Threshold
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - device_class: duration
+    entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: U_V_F2
+    name: Under-Frequency Level 2 Time Sampling Value
+    native_unit_of_measurement: s
+    state_class: measurement
+    suggested_display_precision: 2
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: CLS_L_S
+    name: CLS Lock State of INTL
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: CLS_L_M_S
+    name: CLS Lock State of Mfr.
+  - entity_category: diagnostic
+    entity_registry_enabled_default: false
+    key: CLS_S
+    name: CLS State
