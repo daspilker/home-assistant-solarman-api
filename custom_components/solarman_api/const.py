@@ -47,7 +47,7 @@ PROFILE_SCHEMA = vol.Schema({
 
 def get_profile_list(hass):
     """Scan the profiles directory for .yaml files."""
-    path = hass.config.path("../", "custom_components", DOMAIN, "profiles")
+    path = os.path.join(os.path.dirname(__file__), "profiles")
     if not os.path.exists(path):
         LOGGER.debug(f"{path} not found.")
         return []
@@ -57,10 +57,9 @@ def get_profile_list(hass):
 
 def load_profile(hass, profile_name):
     """Load a specific profile from the profiles directory."""
-    path = hass.config.path("../", "custom_components/", DOMAIN, "profiles", f"{profile_name}.yaml")
-
-    if not os.path.exists(path):
-        LOGGER.debug(f"{path} not found.")
+    path = os.path.join(os.path.dirname(__file__), "profiles", f"{profile_name}.yaml")
+    if not os.path.isfile(path):
+        LOGGER.debug(f"File {path} not found.")
         return None
 
     try:
